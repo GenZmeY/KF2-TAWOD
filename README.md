@@ -1,7 +1,6 @@
 [![](PublicationContent/mutbanner.png)](https://steamcommunity.com/sharedfiles/filedetails/?id=2379769040)
 
 [![Steam Workshop](https://img.shields.io/badge/steam-workshop-0)](https://steamcommunity.com/sharedfiles/filedetails/?id=2379769040)
-[![Steam Subscriptions](https://img.shields.io/steam/subscriptions/2379769040)](https://steamcommunity.com/sharedfiles/filedetails/?id=2379769040)
 [![Steam Favorites](https://img.shields.io/steam/favorites/2379769040)](https://steamcommunity.com/sharedfiles/filedetails/?id=2379769040)
 [![Steam Update Date](https://img.shields.io/steam/update-date/2379769040)](https://steamcommunity.com/sharedfiles/filedetails/?id=2379769040)
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/GenZmeY/KF2-TAWOD)](https://github.com/GenZmeY/KF2-TAWOD/tags)
