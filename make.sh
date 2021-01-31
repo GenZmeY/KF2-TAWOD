@@ -121,7 +121,7 @@ function brew ()
 function brew_unpublished ()
 {
 	rm -rf "$MutPublish"
-	if  ! compiled; then
+	if ! compiled; then
 		compile
 	fi
 	cp -rf "$MutUnpublish" "$MutPublish"
