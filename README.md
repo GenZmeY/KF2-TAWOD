@@ -1,1 +1,1 @@
-# KF2-ThrowAllWeaponsOnDeath
+# Throw All Weapons On Death Mutator
