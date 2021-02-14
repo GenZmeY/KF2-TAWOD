@@ -12,8 +12,6 @@ simulated event PostBeginPlay()
 	if (bDeleteMe)
 		return;
 	
-	WorldInfo.Game.DefaultPawnClass = class'TAWODPawn_Human';
-	
 	`Log("[TAWOD] Loaded mutator.");
 }
 
@@ -26,6 +24,21 @@ function AddMutator(Mutator Mut)
 		Mut.Destroy();
 	else
 		Super.AddMutator(Mut);
+}
+
+function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> damageType, vector HitLocation)
+{
+	local KFWeapon TempWeapon;
+	local KFPawn_Human KFP;
+	
+	KFP = KFPawn_Human(Killed);
+	
+	if (Role >= ROLE_Authority && KFP != None && KFP.InvManager != none)
+		foreach KFP.InvManager.InventoryActors(class'KFWeapon', TempWeapon)
+			if (TempWeapon != none && TempWeapon.bDropOnDeath && TempWeapon.CanThrow())
+				KFP.TossInventory(TempWeapon);
+
+	return Super.PreventDeath(Killed, Killer, damageType, HitLocation);
 }
 
 defaultproperties
