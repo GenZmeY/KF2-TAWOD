@@ -1,24 +1,14 @@
-Class TAWODMut extends KFMutator;
+class TAWODMut extends KFMutator;
 
-simulated event PostBeginPlay()
+public event PreBeginPlay()
 {
-    super.PostBeginPlay();
-
-	if (WorldInfo.Game.BaseMutator == None)
-		WorldInfo.Game.BaseMutator = Self;
-	else
-		WorldInfo.Game.BaseMutator.AddMutator(Self);
-	
-	if (bDeleteMe)
-		return;
-	
-	`Log("[TAWOD] Loaded mutator.");
+	Super.PreBeginPlay();
+	`log("Loaded.", true, 'TAWOD');
 }
 
-function AddMutator(Mutator Mut)
+public function AddMutator(Mutator Mut)
 {
-	if (Mut == Self)
-		return;
+	if (Mut == Self) return;
 	
 	if (Mut.Class == Class)
 		Mut.Destroy();
@@ -26,16 +16,16 @@ function AddMutator(Mutator Mut)
 		Super.AddMutator(Mut);
 }
 
-function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> damageType, vector HitLocation)
+public function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> damageType, vector HitLocation)
 {
 	local KFWeapon TempWeapon;
 	local KFPawn_Human KFP;
 	
 	KFP = KFPawn_Human(Killed);
 	
-	if (Role >= ROLE_Authority && KFP != None && KFP.InvManager != none)
+	if (Role >= ROLE_Authority && KFP != None && KFP.InvManager != None)
 		foreach KFP.InvManager.InventoryActors(class'KFWeapon', TempWeapon)
-			if (TempWeapon != none && TempWeapon.bDropOnDeath && TempWeapon.CanThrow())
+			if (TempWeapon != None && TempWeapon.bDropOnDeath && TempWeapon.CanThrow())
 				KFP.TossInventory(TempWeapon);
 
 	return Super.PreventDeath(Killed, Killer, damageType, HitLocation);
@@ -43,4 +33,5 @@ function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> dam
 
 defaultproperties
 {
+
 }

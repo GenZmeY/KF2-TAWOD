@@ -17,4 +17,4 @@ You will not gain experience for playing with this mutator.
 [code]?Mutator=TAWOD.TAWODMut[/code]
 
 [h1]Sources:[/h1]
-[url=https://github.com/GenZmeY/KF2-TAWOD][u]Github[/u][/url] (GNU GPLv3)
+[url=https://github.com/GenZmeY/KF2-TAWOD]https://github.com/GenZmeY/KF2-TAWOD[/url] (GNU GPLv3)
