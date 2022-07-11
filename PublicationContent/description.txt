@@ -1,20 +1,23 @@
-[img]https://raw.githubusercontent.com/GenZmeY/KF2-TAWOD/master/PublicationContent/mutbanner.png[/img]
+[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-TAWOD[/img] [img]https://img.shields.io/steam/subscriptions/2379769040[/img] [img]https://img.shields.io/steam/favorites/2379769040[/img] [img]https://img.shields.io/steam/update-date/2379769040[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2379769040][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-TAWOD[/img][/url]
 
 [h1]Description:[/h1]
 [i]A small mutator that forces players to throw all their weapons on death (not just the current weapon as in the game by default). [/i]
 
-[h1]The mutator is not whitelisted![/h1]
-You will not gain experience for playing with this mutator.
+[h1]Whitelisted?[/h1]
+No. This mod is not whitelisted and will de-rank your server. Any XP gained will not be saved.
 
-[h1]Usage (server):[/h1]
-[b]Note:[/b] If you don't understand what is written here, read the article [url=https://wiki.killingfloor2.com/index.php?title=Dedicated_Server_(Killing_Floor_2)][u]Dedicated Server (KF2 wiki)[/u][/url] before following these instructions.
-
-1. Open your PCServer-KFEngine.ini / LinuxServer-KFEngine.ini;  
-2. Add the following string to the [OnlineSubsystemSteamworks.KFWorkshopSteamworks] section:  
-[code]ServerSubscribedWorkshopItems=2379769040[/code]
-3. Start the server and wait while the mutator is downloading;
-4. Add the following line to the startup parameters and restart the server:
-[code]?Mutator=TAWOD.TAWODMut[/code]
+[h1]Usage (server)[/h1]
+[b]Note:[/b] [i]If you don't understand what is written here, read the article [url=https://wiki.killingfloor2.com/index.php?title=Dedicated_Server_(Killing_Floor_2)][u]Dedicated Server (KF2 wiki)[/u][/url] before following these instructions.[/i]
+[olist]
+[*]Open your [b]PCServer-KFEngine.ini[/b] / [b]LinuxServer-KFEngine.ini[/b];
+[*]Find the [b][IpDrv.TcpNetDriver][/b] section and make sure that there is a line (add if not):
+[b]DownloadManagers=OnlineSubsystemSteamworks.SteamWorkshopDownload[/b]
+❗️ If there are several [b]DownloadManagers=[/b] then the line above should be the first ❗️
+[*]Add the following string to the [b][OnlineSubsystemSteamworks.KFWorkshopSteamworks][/b] section (create one if it doesn't exist):
+[b]ServerSubscribedWorkshopItems=2379769040[/b]
+[*]Start the server and wait while the mutator is downloading;
+[*]Add mutator to server start parameters: [b]?Mutator=TAWOD.TAWODMut[/b] and restart the server.
+[/olist]
 
 [h1]Sources:[/h1]
-[url=https://github.com/GenZmeY/KF2-TAWOD]https://github.com/GenZmeY/KF2-TAWOD[/url] (GNU GPLv3)
+[url=https://github.com/GenZmeY/KF2-TAWOD]https://github.com/GenZmeY/KF2-TAWOD[/url] [b](GNU GPLv3)[/b]
