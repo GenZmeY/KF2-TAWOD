@@ -1,7 +1,7 @@
-[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-TAWOD[/img] [img]https://img.shields.io/steam/subscriptions/2379769040[/img] [img]https://img.shields.io/steam/favorites/2379769040[/img] [img]https://img.shields.io/steam/update-date/2379769040[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2379769040][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-TAWOD[/img][/url]
+[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-TAWOD[/img] [img]https://img.shields.io/steam/favorites/2379769040[/img] [img]https://img.shields.io/steam/update-date/2379769040[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2379769040][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-TAWOD[/img][/url]
 
 [h1]Description:[/h1]
-[i]A small mutator that forces players to throw all their weapons on death (not just the current weapon as in the game by default). [/i]
+[i]A small server-side mutator that forces players to throw all their weapons on death (not just the current weapon as in the game by default).[/i]
 
 [h1]Whitelisted?[/h1]
 No. This mod is not whitelisted and will de-rank your server. Any XP gained will not be saved.

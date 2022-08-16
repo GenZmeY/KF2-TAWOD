@@ -22,13 +22,8 @@ A small mutator that forces players to throw all their weapons on death (not jus
 5. The compiled files will be here:  
 `C:\Users\<USERNAME>\Documents\My Games\KillingFloor2\KFGame\Unpublished\BrewedPC\Script\`
 
-# Usage (Server)
-1. Open your PCServer-KFEngine.ini / LinuxServer-KFEngine.ini;  
-2. Add the following string to the [OnlineSubsystemSteamworks.KFWorkshopSteamworks] section (create one if it doesn't exist):  
-`ServerSubscribedWorkshopItems=2379769040`  
-3. Start the server and wait while the mutator is downloading;  
-4. Add the following line to the startup parameters and restart the server:  
-`?Mutator=TAWOD.TAWODMut`  
+# Usage
+[See steam workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2379769040)
 
 # Bug reports
 If you find a bug, create new issue here: [Issues](https://github.com/GenZmeY/KF2-TAWOD/issues)  
