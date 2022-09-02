@@ -1,2 +1,2 @@
-testing.ini
-3rd-party-bin
+*.psd
+/ignore
