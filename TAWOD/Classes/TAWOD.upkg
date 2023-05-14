@@ -1,4 +1,4 @@
 [Flags]
-AllowDownload=False
+AllowDownload=True
 ClientOptional=False
-ServerSideOnly=True
+ServerSideOnly=False
