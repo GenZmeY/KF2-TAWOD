@@ -9,7 +9,7 @@ public event PreBeginPlay()
 public function AddMutator(Mutator Mut)
 {
 	if (Mut == Self) return;
-	
+
 	if (Mut.Class == Class)
 		Mut.Destroy();
 	else
@@ -20,9 +20,9 @@ public function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageTy
 {
 	local KFWeapon TempWeapon;
 	local KFPawn_Human KFP;
-	
+
 	KFP = KFPawn_Human(Killed);
-	
+
 	if (Role >= ROLE_Authority && KFP != None && KFP.InvManager != None)
 		foreach KFP.InvManager.InventoryActors(class'KFWeapon', TempWeapon)
 			if (TempWeapon != None && TempWeapon.bDropOnDeath && TempWeapon.CanThrow())
