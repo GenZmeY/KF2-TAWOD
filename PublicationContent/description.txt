@@ -16,7 +16,7 @@ No. This mod is not whitelisted and will de-rank your server. Any XP gained will
 [*]Add the following string to the [b][OnlineSubsystemSteamworks.KFWorkshopSteamworks][/b] section (create one if it doesn't exist):
 [b]ServerSubscribedWorkshopItems=2379769040[/b]
 [*]Start the server and wait while the mutator is downloading;
-[*]Add mutator to server start parameters: [b]?Mutator=TAWOD.TAWODMut[/b] and restart the server.
+[*]Add mutator to server start parameters: [b]?Mutator=TAWOD.Mut[/b] and restart the server.
 [/olist]
 
 [h1]Sources:[/h1]
