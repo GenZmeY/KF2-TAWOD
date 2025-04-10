@@ -1,23 +1,31 @@
 [img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-TAWOD[/img] [img]https://img.shields.io/steam/favorites/2379769040[/img] [img]https://img.shields.io/steam/update-date/2379769040[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2379769040][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-TAWOD[/img][/url]
 
-[h1]Description:[/h1]
-[i]A small server-side mutator that forces players to throw all their weapons on death (not just the current weapon as in the game by default).[/i]
+[h1]📋 Description:[/h1]
+A small server-side mutator that changes the default behavior by forcing players to drop all their weapons on death (instead of just the current weapon).
 
-[h1]Whitelisted?[/h1]
-No. This mod is not whitelisted and will de-rank your server. Any XP gained will not be saved.
+[h1]❌ Whitelisted?[/h1]
+No. This mod is not whitelisted and will de-rank your server. Any XP earned will not be saved.
 
-[h1]Usage (server)[/h1]
-[b]Note:[/b] [i]If you don't understand what is written here, read the article [url=https://wiki.killingfloor2.com/index.php?title=Dedicated_Server_(Killing_Floor_2)][u]Dedicated Server (KF2 wiki)[/u][/url] before following these instructions.[/i]
+But I hope that it will be whitelisted - I submitted whitelist request here:
+https://forums.tripwireinteractive.com/index.php?threads/whitelisting-mods-and-mutators.120340/post-2353664
+
+[h1]🖥️ Usage (server)[/h1]
+[b]Note:[/b] [i]If this is unclear, first read: [url=https://wiki.killingfloor2.com/index.php?title=Dedicated_Server_(Killing_Floor_2)][u]Dedicated Server Guide (KF2 wiki)[/u][/url][/i]
 [olist]
-[*]Open your [b]PCServer-KFEngine.ini[/b] / [b]LinuxServer-KFEngine.ini[/b];
-[*]Find the [b][IpDrv.TcpNetDriver][/b] section and make sure that there is a line (add if not):
-[b]DownloadManagers=OnlineSubsystemSteamworks.SteamWorkshopDownload[/b]
-❗️ If there are several [b]DownloadManagers=[/b] then the line above should be the first ❗️
+[*]Open [b]PCServer-KFEngine.ini[/b] / [b]LinuxServer-KFEngine.ini[/b].
+[*]Find [b][IpDrv.TcpNetDriver][/b] section and ensure line exists (add if missing):
+[code]DownloadManagers=OnlineSubsystemSteamworks.SteamWorkshopDownload[/code]
+(If there are several [b]DownloadManagers[/b] then the line above should be the first)
 [*]Add the following string to the [b][OnlineSubsystemSteamworks.KFWorkshopSteamworks][/b] section (create one if it doesn't exist):
-[b]ServerSubscribedWorkshopItems=2379769040[/b]
-[*]Start the server and wait while the mutator is downloading;
-[*]Add mutator to server start parameters: [b]?Mutator=TAWOD.Mut[/b] and restart the server.
+[code]ServerSubscribedWorkshopItems=2379769040[/code]
+[*]Start server and wait for mutator download.
+[*]When the download is complete, stop the server.
+[*]Add mutator to server start parameters: [code]?Mutator=TAWOD.Mut[/code] and start the server.
 [/olist]
 
-[h1]Sources:[/h1]
-[url=https://github.com/GenZmeY/KF2-TAWOD]https://github.com/GenZmeY/KF2-TAWOD[/url] [b](GNU GPLv3)[/b]
+[h1]☑️ Status: Completed[/h1]
+✔️ The mutator works with the current version of the game (v1150) and I have implemented everything I planned.
+⛔️ Development has stopped: I no longer have the time or motivation to maintain this mod. No further updates or bug fixes are planned.
+
+[h1]📜 Sources[/h1]
+https://github.com/GenZmeY/KF2-TAWOD [b](GNU GPLv3)[/b]
